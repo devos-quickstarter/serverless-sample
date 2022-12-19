@@ -1,0 +1,14 @@
+{
+  "name": "serverless-plan-b",
+  "version": "1.0.0",
+  "description": "``` aws lambda update-function-code --function-name serverless-lambda-func --zip-file fileb://sample.zip",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dave.kim",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1"
+  }
+}

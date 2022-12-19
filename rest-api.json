@@ -1,0 +1,153 @@
+{
+  "openapi": "3.0.1",
+  "info" : {
+    "title": "serverless-agw",
+    "version": "1.1"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "uri": "$LAMBDA_INVOKE_ARN",
+          "payloadFormatVersion": "1.0",
+          "httpMethod": "POST",
+          "type": "AWS_PROXY"
+        }
+      }
+    },
+    "/product": {
+      "get": {
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response"
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "uri": "$LAMBDA_INVOKE_ARN",
+          "payloadFormatVersion": "1.0",
+          "httpMethod": "POST",
+          "type": "AWS_PROXY"
+        }
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "description": "200 response"
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "uri": "$LAMBDA_INVOKE_ARN",
+          "payloadFormatVersion": "1.0",
+          "httpMethod": "POST",
+          "type": "AWS_PROXY"
+        }
+      },
+      "put": {
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response"
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "uri": "$LAMBDA_INVOKE_ARN",
+          "payloadFormatVersion": "1.0",
+          "httpMethod": "POST",
+          "type": "AWS_PROXY"
+        }
+      },
+      "delete": {
+        "parameters": [
+          {
+            "name": "productId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response"
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "uri": "$LAMBDA_INVOKE_ARN",
+          "payloadFormatVersion": "1.0",
+          "httpMethod": "POST",
+          "type": "AWS_PROXY"
+        }
+      }
+    },
+    "/products": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "200 response"
+          }
+        },
+        "x-amazon-apigateway-integration": {
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "uri": "$LAMBDA_INVOKE_ARN",
+          "payloadFormatVersion": "1.0",
+          "httpMethod": "POST",
+          "type": "AWS_PROXY"
+        }
+      }
+    }
+  }
+}
